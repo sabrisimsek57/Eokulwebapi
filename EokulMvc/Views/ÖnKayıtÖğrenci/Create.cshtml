@@ -1,0 +1,84 @@
+﻿@using Eokulwebapi.Dtos.ÖnKayıtÖğrenciDto
+@model CreateÖnKayıtÖğrenciDto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/webb/addsale.css">
+    <title>Create</title>
+</head>
+<body>
+    <div class="form-container">
+    <form asp-action="Create" method="post">
+        <div class="form-group">
+            <label asp-for="ÖğrenciAD" class="control-label">Öğrenci Adı</label>
+            <input asp-for="ÖğrenciAD" class="form-control" />
+            <span asp-validation-for="ÖğrenciAD" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ÖğrenciSoyad" class="control-label">Öğrenci Soyadı</label>
+            <input asp-for="ÖğrenciSoyad" class="form-control" />
+            <span asp-validation-for="ÖğrenciSoyad" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Cinsiyet" class="control-label">Cinsiyet</label>
+            <input asp-for="Cinsiyet" class="form-control" />
+            <span asp-validation-for="Cinsiyet" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="BitirdiğiOkul" class="control-label">Bitirdiği Okul</label>
+            <input asp-for="BitirdiğiOkul" class="form-control" />
+            <span asp-validation-for="BitirdiğiOkul" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NotOrtalamsı" class="control-label">Not Ortalaması</label>
+            <input asp-for="NotOrtalamsı" class="form-control" type="number" step="0.01" />
+            <span asp-validation-for="NotOrtalamsı" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="VeliAd" class="control-label">Veli Adı</label>
+            <input asp-for="VeliAd" class="form-control" />
+            <span asp-validation-for="VeliAd" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="VeliSoyad" class="control-label">Veli Soyadı</label>
+            <input asp-for="VeliSoyad" class="form-control" />
+            <span asp-validation-for="VeliSoyad" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="EvTelefonu" class="control-label">Ev Telefonu</label>
+            <input asp-for="EvTelefonu" class="form-control" type="tel" />
+            <span asp-validation-for="EvTelefonu" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="İşTelefonu" class="control-label">İş Telefonu</label>
+            <input asp-for="İşTelefonu" class="form-control" type="tel" />
+            <span asp-validation-for="İşTelefonu" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="EvAdresi" class="control-label">Ev Adresi</label>
+            <input asp-for="EvAdresi" class="form-control" />
+            <span asp-validation-for="EvAdresi" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="İlçe" class="control-label">İlçe</label>
+            <input asp-for="İlçe" class="form-control" />
+            <span asp-validation-for="İlçe" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="İl" class="control-label">İl</label>
+            <input asp-for="İl" class="form-control" />
+            <span asp-validation-for="İl" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Oluştur" class="btn btn-primary" />
+        </div>
+    </form>
+    </div>
+</body>
+</html>

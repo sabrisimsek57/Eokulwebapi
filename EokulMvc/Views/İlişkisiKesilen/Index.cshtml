@@ -1,0 +1,78 @@
+﻿@using Eokulwebapi.Dtos.İlişkisiKesilen
+@model List<ResultİlişkisiKesilenDto>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/web/stylee.css">
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+
+        @await Component.InvokeAsync("_sidebar")
+
+        <main>
+            <div class="recent-orders">
+                <h2></h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>İlişkisiKesilenId</th>
+                            <th>ÖğrenciId</th>
+                            <th>İlişkisiKesilmeTarihi</th>
+                            <th>gerekçe</th>
+
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                   
+
+
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+
+                            <tr>
+                                <td>@item.İlişkisiKesilenId</td>
+                                <td>@item.ÖğrenciId</td>
+                                <td>@item.İlişkisiKesilmeTarihi</td>
+                                <td>@item.gerekçe</td>
+
+
+
+
+
+                                <td><a href="/İlişkisiKesilen/Delete/@item.İlişkisiKesilenId" class="btn btn-dark">Sil</a></td>
+                                <td><a href="/İlişkisiKesilen/Edit/@item.İlişkisiKesilenId" class="btn btn-outline-danger">Güncelle</a></td>
+
+
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+                <a href="/İlişkisiKesilen/Create/" class="btn btn-primary">Yeni Açıklama Ekle</a>
+
+            </div>
+            <main>
+    </div>
+</body>
+</html>
+
+
+

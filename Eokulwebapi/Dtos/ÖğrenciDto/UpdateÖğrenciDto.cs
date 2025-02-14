@@ -11,6 +11,6 @@
         public int ÖnKayıtId { get; set; } // Ön Kayıt ID'si
         public int SınıfId { get; set; } // Sınıf ID'si
 
-        public string Şube { get; set; } // Sınıf Şubesi'si
+        
     }
 }

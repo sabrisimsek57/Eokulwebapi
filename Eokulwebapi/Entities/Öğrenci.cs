@@ -25,5 +25,16 @@ namespace Eokulwebapi.Entities
         public int SınıfId { get; set; } // Sınıf ID'si
         public string Şube { get; set; } // Sınıf ID'si
         public Sınıf Sınıf { get; set; } // İlişkili Sınıf
+
+        // Öğrencinin devamsızlık bilgileri
+        public List<Devamsızlık> Devamsızlıklar { get; set; } = new List<Devamsızlık>();
+
+        // Mezuniyet, sevk gibi durumlarda ilişkisi kesilen öğrenci bilgisi
+        public İlişkisiKesilen İlişkisiKesilen { get; set; } // İlişkisi kesilen bilgi
+
+
+        // AppUser ile ilişki kurmak için navigation property
+        public AppUser AppUser { get; set; } // Öğrenciye bağlı AppUser
+
     }
 }

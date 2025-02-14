@@ -1,0 +1,79 @@
+﻿@using Eokulwebapi.Dtos.DersProgramıDto
+@model List<ResultDersProgramıDto>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/web/stylee.css">
+    <title>GetDersProgramıBySınıfId</title>
+</head>
+<body>
+    <div class="container">
+
+        @await Component.InvokeAsync("_sidebar")
+
+        <main>
+            <div class="recent-orders">
+                <h2></h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DersProgramıId</th>
+                            <th>Gün</th>
+                            <th>KaçıncıDers</th>
+                            <th>dersınId</th>
+                            <th>dersınad</th>
+                            <th>SınıfId</th>
+
+                            
+
+
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+
+                            <tr>
+                                <td>@item.DersProgramıId</td>
+                                <td>@item.Gün</td>
+                                <td>@item.KaçıncıDers</td>
+                                <td>@item.DersId</td>
+                                <td>@item.DersAdı</td>
+                                <td>@item.SınıfId</td>
+
+
+
+
+
+
+
+                               
+
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+                <a href="/DersProgram/Index/" class="btn btn-primary">Anasayfa </a>
+
+            </div>
+            <main>
+    </div>
+</body>
+</html>
+
+
+

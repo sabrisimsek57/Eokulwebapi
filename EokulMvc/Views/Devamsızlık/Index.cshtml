@@ -1,0 +1,77 @@
+﻿@using Eokulwebapi.Dtos.DevamsızlıkDto
+@model List<ResultDevamsızlıkDto>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/web/stylee.css">
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+
+        @await Component.InvokeAsync("_sidebar")
+
+        <main>
+            <div class="recent-orders">
+                <h2></h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DevamsızlıkId</th>
+                            <th>ÖğrenciId</th>
+                            <th>Tarih</th>
+                            <th>RaporluMu</th>
+                            <th>NöbetçiMi</th>
+
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                          
+
+
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+
+                            <tr>
+                                <td>@item.DevamsızlıkId</td>
+                                <td>@item.ÖğrenciId</td>
+                                <td>@item.Tarih</td>
+                                <td>@item.RaporluMu</td>
+                                <td>@item.NöbetçiMi</td>
+
+
+
+
+
+                                <td><a href="/Devamsızlıkk/Delete/@item.DevamsızlıkId" class="btn btn-dark">Sil</a></td>
+                                <td><a href="/Devamsızlıkk/Edit/@item.DevamsızlıkId" class="btn btn-outline-danger">Güncelle</a></td>
+                              
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+                <a href="/Devamsızlıkk/Create/" class="btn btn-primary">Yeni Devamsızlık Ekle</a>
+
+            </div>
+            <main>
+    </div>
+</body>
+</html>
+
+

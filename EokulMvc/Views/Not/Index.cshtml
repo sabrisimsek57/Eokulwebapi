@@ -1,0 +1,74 @@
+﻿@using Eokulwebapi.Dtos.NotDto
+@model List<ResultNewNotDto>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/web/stylee.css">
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+
+        @await Component.InvokeAsync("_sidebar")
+
+        <main>
+            <div class="recent-orders">
+                <h2></h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NotId</th>
+                            <th>DersId</th>
+                            <th>NotDeğeri</th>
+                            <th>ÖğrenciId</th>
+
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                            <th>ÖğrenciNotları</th>
+                          
+
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+
+                            <tr>
+                                <td>@item.NotId</td>
+                                <td>@item.DersId</td>
+                                <td>@item.NotDeğeri</td>
+                                <td>@item.ÖğrenciId</td>
+
+
+
+
+
+                                <td><a href="/Not/Delete/@item.NotId" class="btn btn-dark">Sil</a></td>
+                                <td><a href="/Not/Edit/@item.NotId" class="btn btn-outline-danger">Güncelle</a></td>
+                                <td><a href="/Not/GetByÖğrenciId/@item.ÖğrenciId" class="btn btn-outline-danger">Notları</a></td>
+
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+                <a href="/Not/Create/" class="btn btn-primary">Yeni Açıklama Ekle</a>
+
+            </div>
+            <main>
+    </div>
+</body>
+</html>

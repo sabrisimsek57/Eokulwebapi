@@ -1,0 +1,75 @@
+﻿@using Eokulwebapi.Dtos.NotDto
+@model List<ResultNotDto>
+@{
+    Layout = null;
+    var öğrenciId = TempData["ÖğrenciId"] as int?;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/web/stylee.css">
+    <title>GetNotlarByÖğrenciId</title>
+</head>
+<body>
+    <div class="container">
+
+        @await Component.InvokeAsync("_sidebar")
+
+        <main>
+            <div class="recent-orders">
+                <h2></h2>
+                @if (öğrenciId.HasValue)
+                {
+                    <p>Öğrenci ID: @öğrenciId</p>
+                }
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DersAdı</th>
+                            <th>NotDeğeri</th>
+                            <th>Belge Durumu</th>
+                            <th>Devamsızlık</th>
+
+
+
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+
+                            <tr>
+                                <td>@item.DersAdı</td>
+                                <td>@item.NotDeğeri</td>
+
+
+
+
+
+
+                                <td><a href="/Not/HesaplaDiploma/@öğrenciId" class="btn btn-outline-danger"> Görüntüle</a></td>
+                                <td><a href="/Devamsızlık/ÖgrenciDevamsizlik/@öğrenciId" class="btn btn-outline-danger"> Görüntüle</a></td>
+                                
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            
+                <a href="/DersProgram/GetDersProgramıBySınıfId/" class="btn btn-primary">Ders Programı </a>
+
+            </div>
+            <main>
+    </div>
+</body>
+</html>
+

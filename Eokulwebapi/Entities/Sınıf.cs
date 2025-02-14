@@ -11,5 +11,9 @@ namespace Eokulwebapi.Entities
 
         // Bir sınıf birden fazla öğrenci içerebilir
         public List<Öğrenci> Öğrenciler { get; set; } = new List<Öğrenci>();
+
+        // Bir sınıfın birçok ders programı olabilir
+        public List<DersProgramı> DersProgramları { get; set; } = new List<DersProgramı>();
     }
 }
+

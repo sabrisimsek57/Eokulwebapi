@@ -1,0 +1,78 @@
+﻿@using Eokulwebapi.Dtos.DevamsızlıkDto
+@model List<ResultDevamsızlıkDto>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/web/stylee.css">
+    <title>Index</title>
+    <title>ÖgrenciDevamsizlik</title>
+</head>
+<body>
+    <div class="container">
+
+        @await Component.InvokeAsync("_sidebar")
+
+        <main>
+            <div class="recent-orders">
+                <h2></h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                           
+                            <th>Tarih</th>
+                            <th>RaporluMu</th>
+                            <th>NöbetçiMi</th>
+
+                         
+
+
+
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+
+                            <tr>
+                 
+                               
+                                <td>@item.Tarih</td>
+                                <td>@item.RaporluMu</td>
+                                <td>@item.NöbetçiMi</td>
+
+
+
+
+
+                           
+
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+                <a href="/Login/Index/" class="btn btn-primary">Giriş </a>
+
+            </div>
+            <main>
+    </div>
+</body>
+</html>
+
+
+
+

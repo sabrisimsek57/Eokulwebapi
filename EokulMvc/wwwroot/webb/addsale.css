@@ -1,0 +1,92 @@
+:root {
+    --color-primary: #a68b6d;
+    --color-danger: #9e4a4a;
+    --color-success: #6c8f72;
+    --color-warning: #c7a17a;
+    --color-white: #fff;
+    --color-info-dark: #555555;
+    --color-info-light: #e8e8e8;
+    --color-dark: #363949;
+    --color-light: rgba(168, 139, 109, 0.18);
+    --color-primary-variant: #7c6650;
+    --color-dark-variant: #8e8579;
+    --color-background: #f6f6f9;
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.form-container {
+    width: 500px; /* Geniþliði artýrdýk */
+    background: var(--color-white);
+    padding: 25px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Form içeriðini ortaladýk */
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+    align-self: flex-start; /* Etiketleri sola hizaladýk */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="submit"],
+select {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Tutarlý boyutlandýrma için */
+    width: 100%; /* Geniþliði %100 yaptýk */
+}
+
+input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Submit butonunun geniþliðini içeriðine göre ayarladýk */
+}
+
+    input[type="submit"]:hover {
+        background-color: var(--color-danger);
+    }
+
+.material-icons {
+    vertical-align: middle;
+    margin-right: 8px;
+}

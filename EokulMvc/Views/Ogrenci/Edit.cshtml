@@ -1,0 +1,66 @@
+﻿@model UpdateÖğrenciDto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/webb/addsale.css">
+    <title>Edit</title>
+</head>
+<body>
+    <div class="form-container">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="ÖğrenciId" />
+
+            <div class="form-group">
+                <label asp-for="OkulNumarası" class="control-label"></label>
+                <input asp-for="OkulNumarası" class="form-control" />
+                <span asp-validation-for="OkulNumarası" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label"></label>
+                <input asp-for="Ad" class="form-control" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Soyad" class="control-label"></label>
+                <input asp-for="Soyad" class="form-control" />
+                <span asp-validation-for="Soyad" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Cinsiyet" class="control-label"></label>
+                <input asp-for="Cinsiyet" class="form-control" />
+                <span asp-validation-for="Cinsiyet" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DevamDurumu" class="control-label"></label>
+                <input asp-for="DevamDurumu" class="form-control" />
+                <span asp-validation-for="DevamDurumu" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="SınıfId" class="control-label"></label>
+                <input asp-for="SınıfId" class="form-control" />
+                <span asp-validation-for="SınıfId" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Güncelle</button>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>

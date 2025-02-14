@@ -1,0 +1,34 @@
+﻿@using Eokulwebapi.Dtos.NotDto
+@model DiplomaResultDto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="~/web/stylee.css">
+    <title>Diploma Sonuçları</title>
+</head>
+<body>
+    <div class="container">
+
+        @await Component.InvokeAsync("_sidebar")
+
+        <main>
+            <div class="recent-orders">
+
+                <h2>Diploma Hesaplama Sonuçları</h2>
+
+                <p>Ortalama Not: @Model.Ortalama</p>
+                <p>Diploma Durumu: @Model.DiplomaDurumu</p>
+
+                <a href="/Not/Index" class="btn btn-primary">Geri Dön</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

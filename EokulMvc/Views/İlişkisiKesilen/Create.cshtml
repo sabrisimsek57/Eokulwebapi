@@ -1,0 +1,43 @@
+﻿@using Eokulwebapi.Dtos.İlişkisiKesilen
+@model CreateİlişkisiKesilen
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/webb/addsale.css">
+    <title>Create</title>
+</head>
+<body>
+    <div class="form-container">
+
+        <form asp-action="Create" method="post">
+            <div class="form-group">
+                <label asp-for="öğrenciId" class="control-label"></label>
+                <input asp-for="öğrenciId" class="form-control" />
+                <span asp-validation-for="öğrenciId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="gerekçe" class="control-label"></label>
+                <input asp-for="gerekçe" class="form-control" />
+                <span asp-validation-for="gerekçe" class="text-danger"></span>
+            </div>
+         
+
+            <div class="form-group">
+                <input type="submit" value="Oluştur" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

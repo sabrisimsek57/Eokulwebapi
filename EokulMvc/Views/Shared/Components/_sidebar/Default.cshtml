@@ -1,0 +1,78 @@
+﻿<aside>
+    <div class="top">
+        <div class="logo">
+            <!--Add logo img to the fıle for ıt to work-->
+
+
+            <h2>Admin Bilgileri</h2>
+        </div>
+
+    </div>
+    <div class="sidebar">
+        <!--Add link for ıt to work and personalize h3 and icons-->
+        <a href="/Öğretmen/Index">
+            <span class="material-icons">
+                grid_view
+            </span>
+            <h3>Öğretmenler </h3>
+        </a>
+        <a href="/Ogrenci/List" class="active">
+            <span class="material-icons">
+                person
+            </span>
+            <h3>Ögrenci</h3>
+        </a>
+        <a href="/Not/Index">
+            <span class="material-icons">
+                receipt_long
+            </span>
+            <h3>Notlar</h3>
+        </a>
+        <a href="/İlişkisiKesilen/Index">
+            <span class="material-icons">
+                add
+            </span>
+            <h3>İlişki Kesilme Durumu</h3>
+        </a>
+
+        <a href="/Devamsızlık/Index">
+            <span class="material-icons">
+                report
+            </span>
+            <h3>Devamsızlık</h3>
+        </a>
+        <a href="/Ders/Index">
+            <span class="material-icons">
+                settings
+            </span>
+            <h3>Ders</h3>
+        </a>
+        <a href="/DersProgram/Index">
+            <span class="material-icons">
+                settings
+            </span>
+            <h3>Ders Programı</h3>
+        </a>
+        <a href="/Sınıf/Index">
+            <span class="material-icons">
+                settings
+            </span>
+            <h3>Sınıf </h3>
+        </a>
+
+        <a href="/ÖnKayıtÖğrenci/Index">
+            <span class="material-icons">
+                settings
+            </span>
+            <h3>ÖnKayıtÖğrenci </h3>
+        </a>
+        <br />
+        <form asp-controller="Login" asp-action="Logout" method="post">
+            <button type="submit" class="btn btn-primary">
+                <span class="material-icons">logout</span>
+                Çıkış Yap
+            </button>
+        </form>
+       
+    </div>
+</aside>

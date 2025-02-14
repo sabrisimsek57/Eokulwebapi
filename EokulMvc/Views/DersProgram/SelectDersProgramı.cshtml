@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SelectDersProgramı</title>
+</head>
+<body>
+    <h2>Ders Programı Seçimi</h2>
+
+    <form method="get" action="@Url.Action("GetDersProgramıBySınıfId")">
+        <div>
+            <label for="sınıfId">Sınıf ID:</label>
+            <input type="number" id="sınıfId" name="sınıfId" />
+        </div>
+        <button type="submit">Sınıfa Göre Listele</button>
+    </form>
+
+    <form method="get" action="@Url.Action("GetDersProgramıByÖğretmenId")">
+        <div>
+            <label for="öğretmenId">Öğretmen ID:</label>
+            <input type="number" id="öğretmenId" name="öğretmenId" />
+        </div>
+        <button type="submit">Öğretmene Göre Listele</button>
+    </form>
+</body>
+</html>

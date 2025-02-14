@@ -1,0 +1,68 @@
+﻿@model List<ResultDersDto>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/web/stylee.css">
+    <title>Index</title>
+
+</head>
+<body>
+
+
+    <div class="container">
+
+        @await Component.InvokeAsync("_sidebar")
+
+        <main>
+            <div class="recent-orders">
+                <h2></h2>
+
+
+                <!-- Ders Tablosu -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ders Kodu</th>
+                            <th>Ders Adı</th>
+
+                            <th>HD - Kredi</th>
+                            <th>sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var ders in Model)
+                        {
+                            <tr>
+                                <td>@ders.DersKod</td>
+                                <td>@ders.DersAdı</td>
+
+                                <td>@ders.HD_Sırası</td>
+                                <td>
+                                    <a href="/Ders/Edit/@ders.DersId" class="btn btn-outline-danger">Güncelle</a>
+                                </td>
+                                <td>   <a href="/Ders/Delete/@ders.DersId" class="btn btn-outline-danger">Sil</a> </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                <!-- Yeni Ders Ekle Butonu -->
+                <a href="/Ders/Create" class="btn btn-outline-danger">Yeni Ders Ekle</a>
+
+            </div>
+            <main>
+    </div>
+</body>
+</html>

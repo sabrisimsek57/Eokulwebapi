@@ -1,0 +1,75 @@
+﻿@model List<ResultÖğretmenDto>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/web/stylee.css">
+    <title>Index</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        @await Component.InvokeAsync("_sidebar")
+
+        <main>
+            <div class="recent-orders">
+                <h2></h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ÖğretmenId</th>
+                            <th>Sıra</th>
+                            <th>Ad</th>
+                            <th>Soyad</th>
+
+                            <th>Görevi</th>
+                            <th>Branş</th>
+
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+
+                            <tr>
+                                <td>@item.ÖğretmenId</td>
+                                <td>@item.Sıra</td>
+                                <td>@item.Ad</td>
+                                <td>@item.Soyad</td>
+                            
+                                <td>@item.Görevi</td>
+                                <td>@item.Branş</td>
+
+
+
+
+
+                                <td><a href="/Öğretmen/Delete/@item.ÖğretmenId" class="btn btn-dark">Sil</a></td>
+                                <td><a href="/Öğretmen/Edit/@item.ÖğretmenId" class="btn btn-outline-danger">Güncelle</a></td>
+
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+                <a href="/Öğretmen/Create/" class="btn btn-primary">Yeni Açıklama Ekle</a>
+
+            </div>
+            <main>
+    </div>
+</body>
+</html>
